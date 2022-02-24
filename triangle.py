@@ -23,6 +23,7 @@ def area_polygon(l1, *triangle_components):
     last_side = l1
 
     for pair in triangle_components:
-        counted_area += area_triangle(last_side, item[0], item[1])
+        counted_area += area_triangle(last_side, pair[0], pair[1])
+        last_side = pair[1]
 
     return counted_area
